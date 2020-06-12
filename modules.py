@@ -39,7 +39,7 @@ def randomOS():
 def randomBrowserName():
     browserlist = ["Opera", "Chrome 1.2", "Firefox 3.4.2", "Explorer 8"]
 
-def randomduedate():
+def randomDuedate():
     start_date = datetime.date(2016, 1, 1)
     end_date = datetime.date(2021, 2, 1)
     time_between_dates = end_date - start_date
@@ -47,3 +47,10 @@ def randomduedate():
     random_number_of_days = random.randrange(days_between_dates)
     random_date = start_date + datetime.timedelta(days=random_number_of_days)
     return random_date.strftime("%m/%d/%Y")
+
+def randomEstimatedAndLogged():
+    hours = random.randint(0, 24)
+    minutes = random.randint(0, 59)
+    timeFormat = datetime.time(hours, minutes)
+    return (timeFormat.strftime("%H:%M"))
+
